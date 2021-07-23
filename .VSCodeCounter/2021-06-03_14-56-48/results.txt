@@ -1,0 +1,151 @@
+Date : 2021-06-03 14:56:48
+Directory : /home/satendra/Workspace/campus health/project/cht
+Total : 72 files,  8887 codes, 423 comments, 347 blanks, all 9657 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| XML        |         15 |      5,335 |         41 |         16 |      5,392 |
+| Dart       |         32 |      2,444 |        185 |        164 |      2,793 |
+| Java       |          9 |        644 |        132 |        106 |        882 |
+| JSON       |          4 |        260 |          0 |          3 |        263 |
+| Groovy     |          4 |         95 |          3 |         19 |        117 |
+| HTML       |          1 |         43 |         17 |          8 |         68 |
+| YAML       |          1 |         32 |         44 |         17 |         93 |
+| Markdown   |          2 |         13 |          0 |          9 |         22 |
+| Swift      |          1 |         12 |          0 |          2 |         14 |
+| Properties |          2 |          8 |          1 |          2 |         11 |
+| C++        |          1 |          1 |          0 |          1 |          2 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                               | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                  |         72 |      8,887 |        423 |        347 |      9,657 |
+| android                                                                                                                            |         28 |      6,064 |        175 |        141 |      6,380 |
+| android/app                                                                                                                        |         23 |      6,019 |        174 |        128 |      6,321 |
+| android/app/src                                                                                                                    |         21 |      5,869 |        171 |        120 |      6,160 |
+| android/app/src/debug                                                                                                              |          1 |          4 |          3 |          1 |          8 |
+| android/app/src/main                                                                                                               |         19 |      5,861 |        165 |        118 |      6,144 |
+| android/app/src/main/java                                                                                                          |          9 |        644 |        132 |        106 |        882 |
+| android/app/src/main/java/com                                                                                                      |          9 |        644 |        132 |        106 |        882 |
+| android/app/src/main/java/com/iitbhu                                                                                               |          9 |        644 |        132 |        106 |        882 |
+| android/app/src/main/java/com/iitbhu/cht                                                                                           |          9 |        644 |        132 |        106 |        882 |
+| android/app/src/main/java/com/iitbhu/cht/constants                                                                                 |          2 |         25 |          0 |         11 |         36 |
+| android/app/src/main/java/com/iitbhu/cht/models                                                                                    |          1 |        140 |          0 |         25 |        165 |
+| android/app/src/main/java/com/iitbhu/cht/services                                                                                  |          5 |        379 |        124 |         57 |        560 |
+| android/app/src/main/java/com/iitbhu/cht/services/database                                                                         |          2 |        131 |         84 |         17 |        232 |
+| android/app/src/main/java/com/iitbhu/cht/services/locator                                                                          |          1 |         89 |         14 |         15 |        118 |
+| android/app/src/main/res                                                                                                           |          9 |      5,160 |         22 |          9 |      5,191 |
+| android/app/src/main/res/drawable                                                                                                  |          2 |      5,104 |          2 |          3 |      5,109 |
+| android/app/src/main/res/drawable-anydpi-v24                                                                                       |          1 |         15 |          0 |          1 |         16 |
+| android/app/src/main/res/drawable-v21                                                                                              |          1 |          9 |          2 |          3 |         14 |
+| android/app/src/main/res/mipmap-anydpi-v26                                                                                         |          2 |         10 |          0 |          0 |         10 |
+| android/app/src/main/res/values                                                                                                    |          2 |         13 |          9 |          1 |         23 |
+| android/app/src/main/res/values-night                                                                                              |          1 |          9 |          9 |          1 |         19 |
+| android/app/src/profile                                                                                                            |          1 |          4 |          3 |          1 |          8 |
+| android/gradle                                                                                                                     |          1 |          5 |          1 |          1 |          7 |
+| android/gradle/wrapper                                                                                                             |          1 |          5 |          1 |          1 |          7 |
+| assets                                                                                                                             |          1 |         49 |          0 |          0 |         49 |
+| ios                                                                                                                                |          7 |        222 |          2 |          9 |        233 |
+| ios/Runner                                                                                                                         |          7 |        222 |          2 |          9 |        233 |
+| ios/Runner/Assets.xcassets                                                                                                         |          3 |        148 |          0 |          4 |        152 |
+| ios/Runner/Assets.xcassets/AppIcon.appiconset                                                                                      |          1 |        122 |          0 |          1 |        123 |
+| ios/Runner/Assets.xcassets/LaunchImage.imageset                                                                                    |          2 |         26 |          0 |          3 |         29 |
+| ios/Runner/Base.lproj                                                                                                              |          2 |         61 |          2 |          2 |         65 |
+| lib                                                                                                                                |         32 |      2,444 |        185 |        164 |      2,793 |
+| lib/models                                                                                                                         |          2 |         38 |          0 |          7 |         45 |
+| lib/screens                                                                                                                        |         19 |      1,888 |        115 |         83 |      2,086 |
+| lib/screens/widgets                                                                                                                |         10 |      1,199 |         30 |         48 |      1,277 |
+| lib/screens/widgets/Data visualization                                                                                             |          6 |        275 |         11 |         24 |        310 |
+| lib/screens/widgets/Data visualization/piechart                                                                                    |          3 |        159 |         11 |         17 |        187 |
+| lib/screens/widgets/Data visualization/progressBars                                                                                |          2 |         82 |          0 |          4 |         86 |
+| lib/screens/widgets/addOn                                                                                                          |          1 |        282 |          1 |         11 |        294 |
+| lib/screens/widgets/drawer                                                                                                         |          1 |        233 |          0 |          5 |        238 |
+| lib/screens/widgets/report                                                                                                         |          1 |        409 |         18 |          6 |        433 |
+| lib/services                                                                                                                       |          4 |        220 |         53 |         39 |        312 |
+| lib/test                                                                                                                           |          2 |        170 |         15 |         10 |        195 |
+| lib/util                                                                                                                           |          4 |         96 |          1 |         19 |        116 |
+| web                                                                                                                                |          2 |         66 |         17 |          9 |         92 |
++------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                                           | language   | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /home/satendra/Workspace/campus health/project/cht/README.md                                                                       | Markdown   |         10 |          0 |          7 |         17 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/build.gradle                                                        | Groovy     |         58 |          3 |          8 |         69 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/google-services.json                                                | JSON       |         92 |          0 |          0 |         92 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/debug/AndroidManifest.xml                                       | XML        |          4 |          3 |          1 |          8 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/AndroidManifest.xml                                        | XML        |         57 |         11 |          3 |         71 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/java/com/iitbhu/cht/MainActivity.java                      | Java       |        100 |          8 |         13 |        121 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/java/com/iitbhu/cht/constants/AppConstants.java            | Java       |         21 |          0 |          9 |         30 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/java/com/iitbhu/cht/constants/Index.java                   | Java       |          4 |          0 |          2 |          6 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/java/com/iitbhu/cht/models/UserSurroundingsData.java       | Java       |        140 |          0 |         25 |        165 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/java/com/iitbhu/cht/services/OnBootService.java            | Java       |         34 |          6 |          3 |         43 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/java/com/iitbhu/cht/services/UserDataService.java          | Java       |        125 |         20 |         22 |        167 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/java/com/iitbhu/cht/services/database/DataBaseManager.java | Java       |         49 |         80 |          9 |        138 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/java/com/iitbhu/cht/services/database/SQLDBHelper.java     | Java       |         82 |          4 |          8 |         94 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/java/com/iitbhu/cht/services/locator/Locator.java          | Java       |         89 |         14 |         15 |        118 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/res/drawable-anydpi-v24/ic_notri_icon.xml                  | XML        |         15 |          0 |          1 |         16 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/res/drawable-v21/launch_background.xml                     | XML        |          9 |          2 |          3 |         14 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/res/drawable/applogo.xml                                   | XML        |      5,095 |          0 |          1 |      5,096 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/res/drawable/launch_background.xml                         | XML        |          9 |          2 |          2 |         13 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml                      | XML        |          5 |          0 |          0 |          5 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml                | XML        |          5 |          0 |          0 |          5 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/res/values-night/styles.xml                                | XML        |          9 |          9 |          1 |         19 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/res/values/ic_launcher_background.xml                      | XML        |          4 |          0 |          0 |          4 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/main/res/values/styles.xml                                      | XML        |          9 |          9 |          1 |         19 |
+| /home/satendra/Workspace/campus health/project/cht/android/app/src/profile/AndroidManifest.xml                                     | XML        |          4 |          3 |          1 |          8 |
+| /home/satendra/Workspace/campus health/project/cht/android/build.gradle                                                            | Groovy     |         28 |          0 |          6 |         34 |
+| /home/satendra/Workspace/campus health/project/cht/android/gradle.properties                                                       | Properties |          3 |          0 |          1 |          4 |
+| /home/satendra/Workspace/campus health/project/cht/android/gradle/wrapper/gradle-wrapper.properties                                | Properties |          5 |          1 |          1 |          7 |
+| /home/satendra/Workspace/campus health/project/cht/android/settings.gradle                                                         | Groovy     |          8 |          0 |          4 |         12 |
+| /home/satendra/Workspace/campus health/project/cht/android/settings_aar.gradle                                                     | Groovy     |          1 |          0 |          1 |          2 |
+| /home/satendra/Workspace/campus health/project/cht/assets/appLogo.svg                                                              | XML        |         49 |          0 |          0 |         49 |
+| /home/satendra/Workspace/campus health/project/cht/ios/Runner/AppDelegate.swift                                                    | Swift      |         12 |          0 |          2 |         14 |
+| /home/satendra/Workspace/campus health/project/cht/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json                     | JSON       |        122 |          0 |          1 |        123 |
+| /home/satendra/Workspace/campus health/project/cht/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json                   | JSON       |         23 |          0 |          1 |         24 |
+| /home/satendra/Workspace/campus health/project/cht/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md                       | Markdown   |          3 |          0 |          2 |          5 |
+| /home/satendra/Workspace/campus health/project/cht/ios/Runner/Base.lproj/LaunchScreen.storyboard                                   | XML        |         36 |          1 |          1 |         38 |
+| /home/satendra/Workspace/campus health/project/cht/ios/Runner/Base.lproj/Main.storyboard                                           | XML        |         25 |          1 |          1 |         27 |
+| /home/satendra/Workspace/campus health/project/cht/ios/Runner/Runner-Bridging-Header.h                                             | C++        |          1 |          0 |          1 |          2 |
+| /home/satendra/Workspace/campus health/project/cht/lib/main.dart                                                                   | Dart       |         32 |          1 |          6 |         39 |
+| /home/satendra/Workspace/campus health/project/cht/lib/models/index.dart                                                           | Dart       |         10 |          0 |          3 |         13 |
+| /home/satendra/Workspace/campus health/project/cht/lib/models/user.dart                                                            | Dart       |         28 |          0 |          4 |         32 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/Register.dart                                                       | Dart       |        129 |          2 |          4 |        135 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/admin.dart                                                          | Dart       |         95 |          1 |          4 |        100 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/dateSelect.dart                                                     | Dart       |        118 |         79 |          5 |        202 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/fetch.dart                                                          | Dart       |         55 |          1 |          4 |         60 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/home.dart                                                           | Dart       |        152 |          1 |          7 |        160 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/info.dart                                                           | Dart       |         20 |          0 |          2 |         22 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/report.dart                                                         | Dart       |         40 |          1 |          2 |         43 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/settingsScreen.dart                                                 | Dart       |         42 |          0 |          3 |         45 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/sign_in.dart                                                        | Dart       |         38 |          0 |          4 |         42 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/widgets/Data visualization/dataContainer.dart                       | Dart       |         34 |          0 |          3 |         37 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/widgets/Data visualization/piechart/index.dart                      | Dart       |         52 |          0 |          4 |         56 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/widgets/Data visualization/piechart/piechart.dart                   | Dart       |         72 |          0 |          3 |         75 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/widgets/Data visualization/piechart/piechart_draw.dart              | Dart       |         35 |         11 |         10 |         56 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/widgets/Data visualization/progressBars/progressBar.dart            | Dart       |         38 |          0 |          2 |         40 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/widgets/Data visualization/progressBars/progressBarHorizontal.dart  | Dart       |         44 |          0 |          2 |         46 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/widgets/addOn/month_picker.dart                                     | Dart       |        282 |          1 |         11 |        294 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/widgets/drawer/homeDrawer.dart                                      | Dart       |        233 |          0 |          5 |        238 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/widgets/report/reportWidget.dart                                    | Dart       |        409 |         18 |          6 |        433 |
+| /home/satendra/Workspace/campus health/project/cht/lib/screens/widgets/trash.dart                                                  | Dart       |          0 |          0 |          2 |          2 |
+| /home/satendra/Workspace/campus health/project/cht/lib/services/AuthService.dart                                                   | Dart       |         72 |          1 |         11 |         84 |
+| /home/satendra/Workspace/campus health/project/cht/lib/services/DatabaseService.dart                                               | Dart       |         46 |          2 |         11 |         59 |
+| /home/satendra/Workspace/campus health/project/cht/lib/services/ReportService.dart                                                 | Dart       |        100 |         50 |         15 |        165 |
+| /home/satendra/Workspace/campus health/project/cht/lib/services/syncService.dart                                                   | Dart       |          2 |          0 |          2 |          4 |
+| /home/satendra/Workspace/campus health/project/cht/lib/test/randGen.dart                                                           | Dart       |        156 |          5 |          3 |        164 |
+| /home/satendra/Workspace/campus health/project/cht/lib/test/widget_test.dart                                                       | Dart       |         14 |         10 |          7 |         31 |
+| /home/satendra/Workspace/campus health/project/cht/lib/util/colorConstants.dart                                                    | Dart       |         22 |          0 |          3 |         25 |
+| /home/satendra/Workspace/campus health/project/cht/lib/util/constants.dart                                                         | Dart       |         20 |          0 |          5 |         25 |
+| /home/satendra/Workspace/campus health/project/cht/lib/util/theme.dart                                                             | Dart       |         10 |          1 |          2 |         13 |
+| /home/satendra/Workspace/campus health/project/cht/lib/util/ui_helper.dart                                                         | Dart       |         44 |          0 |          9 |         53 |
+| /home/satendra/Workspace/campus health/project/cht/pubspec.yaml                                                                    | YAML       |         32 |         44 |         17 |         93 |
+| /home/satendra/Workspace/campus health/project/cht/web/index.html                                                                  | HTML       |         43 |         17 |          8 |         68 |
+| /home/satendra/Workspace/campus health/project/cht/web/manifest.json                                                               | JSON       |         23 |          0 |          1 |         24 |
+| Total                                                                                                                              |            |      8,887 |        423 |        347 |      9,657 |
++------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

@@ -1,0 +1,92 @@
+{
+  "project_info": {
+    "project_number": "427580948330",
+    "project_id": "campushealth-fd330",
+    "storage_bucket": "campushealth-fd330.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427580948330:android:81358f3bc6eba07c3bef13",
+        "android_client_info": {
+          "package_name": "com.iitbhu.campushealthtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427580948330-35d5olekfnltp8b1omhu3pm95o9rbr3f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iitbhu.campushealthtracker",
+            "certificate_hash": "56d5119ae5fec6411f1ef9f680c761657b36ae21"
+          }
+        },
+        {
+          "client_id": "427580948330-ds6ebcde0megar2jv1jfhcbtlpq4nbec.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iitbhu.campushealthtracker",
+            "certificate_hash": "b10ffa379c10da92a1a0be4613101b9ea218c4cb"
+          }
+        },
+        {
+          "client_id": "427580948330-a7dk4tpj31f58scfiv4unihdic7ubun2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEjeDGh6E8NYPIt-d86mcRjv92sKWQIwc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "427580948330-a7dk4tpj31f58scfiv4unihdic7ubun2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427580948330:android:4c8c4eb07392a68b3bef13",
+        "android_client_info": {
+          "package_name": "com.iitbhu.cht"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427580948330-j63nr0dtp0c5u1mqm54nc3j3ra4to8ro.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iitbhu.cht",
+            "certificate_hash": "56d5119ae5fec6411f1ef9f680c761657b36ae21"
+          }
+        },
+        {
+          "client_id": "427580948330-a7dk4tpj31f58scfiv4unihdic7ubun2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEjeDGh6E8NYPIt-d86mcRjv92sKWQIwc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "427580948330-a7dk4tpj31f58scfiv4unihdic7ubun2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
