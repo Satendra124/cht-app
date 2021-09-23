@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 class ScreenTimeWidget extends StatelessWidget {
   final Duration screenTime;
 
-  const ScreenTimeWidget({Key key, this.screenTime}) : super(key: key);
+  const ScreenTimeWidget({Key key, @required this.screenTime})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(

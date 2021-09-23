@@ -89,8 +89,8 @@ class MenuItem extends StatelessWidget {
   final String text;
   const MenuItem({
     Key key,
-    this.icon,
-    this.text,
+    @required this.icon,
+    @required this.text,
   }) : super(key: key);
 
   @override

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class SleepTimeWidget extends StatelessWidget {
   final Duration sleepTime;
 
-  const SleepTimeWidget({Key key, this.sleepTime}) : super(key: key);
+  const SleepTimeWidget({Key key, @required this.sleepTime}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(

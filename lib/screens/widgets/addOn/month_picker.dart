@@ -5,11 +5,9 @@ import 'package:intl/intl.dart';
 Future<DateTime> showMonthPicker({
   @required BuildContext context,
   @required DateTime initialDate,
-  DateTime firstDate,
-  DateTime lastDate,
+  @required DateTime firstDate,
+  @required DateTime lastDate,
 }) async {
-  assert(context != null);
-  assert(initialDate != null);
   return await showDialog<DateTime>(
       context: context,
       builder: (context) => _MonthPickerDialog(
@@ -24,8 +22,8 @@ class _MonthPickerDialog extends StatefulWidget {
   const _MonthPickerDialog({
     Key key,
     @required this.initialDate,
-    this.firstDate,
-    this.lastDate,
+    @required this.firstDate,
+    @required this.lastDate,
   }) : super(key: key);
   @override
   _MonthPickerDialogState createState() => _MonthPickerDialogState();
@@ -120,7 +118,7 @@ class _MonthPickerDialogState extends State<_MonthPickerDialog> {
                 children: <Widget>[
                   Text(
                     '${DateFormat.yMMM(locale).format(selectedDate)}',
-                    style: theme.primaryTextTheme.subhead,
+                    style: theme.primaryTextTheme.subtitle1,
                   ),
                   Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -135,7 +133,7 @@ class _MonthPickerDialogState extends State<_MonthPickerDialog> {
                             },
                             child: Text(
                               '${DateFormat.y(locale).format(DateTime(displayedPage))}',
-                              style: theme.primaryTextTheme.headline,
+                              style: theme.primaryTextTheme.headline1,
                             ),
                           ),
                         if (isYearSelection)
@@ -145,15 +143,15 @@ class _MonthPickerDialogState extends State<_MonthPickerDialog> {
                               children: <Widget>[
                                 Text(
                                   '${DateFormat.y(locale).format(DateTime(displayedPage * 12))}',
-                                  style: theme.primaryTextTheme.headline,
+                                  style: theme.primaryTextTheme.headline1,
                                 ),
                                 Text(
                                   '-',
-                                  style: theme.primaryTextTheme.headline,
+                                  style: theme.primaryTextTheme.headline1,
                                 ),
                                 Text(
                                   '${DateFormat.y(locale).format(DateTime(displayedPage * 12 + 11))}',
-                                  style: theme.primaryTextTheme.headline,
+                                  style: theme.primaryTextTheme.headline1,
                                 )
                               ]),
                         Row(children: <Widget>[

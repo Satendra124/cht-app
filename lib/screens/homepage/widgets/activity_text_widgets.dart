@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 class ActivityTextWidget extends StatelessWidget {
   final List<ActivityIndexDiscriptions> activityTexts;
 
-  const ActivityTextWidget({Key key, this.activityTexts}) : super(key: key);
+  const ActivityTextWidget({Key key, @required this.activityTexts})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(

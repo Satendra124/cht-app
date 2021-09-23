@@ -18,13 +18,13 @@ class ReportService {
         .get();
     List<LocationHistoryLite> toRet = [];
     for (QueryDocumentSnapshot ReportData in reportDataList.docs) {
-      if (toRet.length > 0 && ReportData.data()["place"] == toRet.last.place) {
-        toRet.last.end = ReportData.data()["time"].toDate();
-      } else {
-        toRet.add(new LocationHistoryLite(
-            place: ReportData.data()["place"],
-            start: ReportData.data()["time"].toDate()));
-      }
+      // if (toRet.length > 0 && ReportData.data()["place"] == toRet.last.place) {
+      //   toRet.last.end = ReportData.data()["time"].toDate();
+      // } else {
+      //   toRet.add(new LocationHistoryLite(
+      //       place: ReportData.data()["place"],
+      //       start: ReportData.data()["time"].toDate()));
+      // }
     }
 
     return toRet.reversed.toList();

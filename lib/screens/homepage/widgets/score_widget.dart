@@ -9,7 +9,7 @@ import 'package:get/get.dart';
 class ScoreWidget extends StatelessWidget {
   final double score;
 
-  const ScoreWidget({Key key, this.score}) : super(key: key);
+  const ScoreWidget({Key key, @required this.score}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(

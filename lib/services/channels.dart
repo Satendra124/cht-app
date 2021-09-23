@@ -3,14 +3,14 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 void startMainServices() async {
-  //return true;
+  return;
   const MethodChannel _channel = const MethodChannel('service_channel');
   await _channel
       .invokeMethod('startLocationServer', {"roll": "19065081"}); //TODO
 }
 
 Future<bool> lookIfServiceCompleted(int calls) async {
-  //return true;
+  return true;
   const MethodChannel _channel = const MethodChannel('service_channel');
   bool isServiceStart = await _channel.invokeMethod('checkIfServiceStart');
   if (isServiceStart)

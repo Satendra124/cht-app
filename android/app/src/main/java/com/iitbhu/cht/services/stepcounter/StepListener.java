@@ -20,11 +20,11 @@ package com.iitbhu.cht.services.stepcounter;
  * Listens for alerts about steps being detected.
  */
 public interface StepListener {
-
   /**
-   * Called when a step has been detected.  Given the time in nanoseconds at
-   * which the step was detected.
-   */
-  public void step(long timeNs);
+   * The step method should transfer recognized steps.
+   * @param accelerationData AccelerationData: A data record of the acceleration sensor, which stands for a step.
+   * @param stepType Enum StepType: One of the three step types from the Enum StepType.
+   **/
+  void step(AccelerationData accelerationData, StepType stepType);
 
 }

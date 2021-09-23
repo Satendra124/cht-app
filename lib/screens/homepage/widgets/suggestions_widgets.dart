@@ -7,7 +7,8 @@ import 'package:url_launcher/url_launcher.dart';
 class SuggestionWidget extends StatelessWidget {
   final Suggestion suggestion;
 
-  const SuggestionWidget({Key key, this.suggestion}) : super(key: key);
+  const SuggestionWidget({Key key, @required this.suggestion})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(

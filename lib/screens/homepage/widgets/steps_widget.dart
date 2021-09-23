@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 class StepsWidget extends StatelessWidget {
   final int steps;
 
-  const StepsWidget({Key key, this.steps}) : super(key: key);
+  const StepsWidget({Key key, @required this.steps}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(

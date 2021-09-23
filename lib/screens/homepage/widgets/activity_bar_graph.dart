@@ -9,7 +9,7 @@ import 'package:pie_chart/pie_chart.dart';
 class ActivityBarGraph extends StatelessWidget {
   final List<IndexData> indexData;
 
-  const ActivityBarGraph({Key key, this.indexData}) : super(key: key);
+  const ActivityBarGraph({Key key, @required this.indexData}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     Map<String, double> pieChartdata = new HashMap();

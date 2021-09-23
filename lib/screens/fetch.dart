@@ -7,6 +7,8 @@ import 'package:cht/util/ui_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'homepage/bottom_stats_sheet.dart';
+
 class FetchPage extends StatefulWidget {
   @override
   _FetchPageState createState() => _FetchPageState();
@@ -25,16 +27,16 @@ class _FetchPageState extends State<FetchPage> {
   init() {
     if (appStateController.authState.value == AuthState.LoggedIn &&
         appStateController.serviceState.value == ServiceState.On) {
-      Get.off(() => HomePage());
+      Get.off(() => BottomStatsSheet());
     }
     if (appStateController.authState.value == AuthState.LoggedIn) {
       if (appStateController.serviceState.value == ServiceState.On)
-        Get.off(() => HomePage());
+        Get.off(() => BottomStatsSheet());
       else {
         startMainServices();
         lookIfServiceCompleted(0).then((value) {
           if (value)
-            Get.off(() => HomePage());
+            Get.off(() => BottomStatsSheet());
           else {
             print("ERROR IN STARTING SERVICE");
             Get.snackbar("Error", "Timeout");
