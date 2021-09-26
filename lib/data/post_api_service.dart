@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:cht/models/report.dart';
 import 'package:cht/models/user.dart';
 import 'package:cht/util/AppConstants.dart';
 import 'package:http/http.dart';
@@ -26,14 +25,14 @@ class PostApiService {
     return user;
   }
 
-  Future<Report> getReport(String uid, DateTime dateDay) async {
-    Uri uri = Uri.parse(BASE_URL + "algorithm/report/");
-    Response response = await post(uri,
-        body: {"useruid": uid, "dateDay": dateDay.toIso8601String()});
-    print("----------------------------------" + response.body);
-    Map<String, dynamic> res = jsonDecode(response.body);
-    //print("----------------------------------" + res['suggestions'].toString());
-    Report report = Report.fromJson(res);
-    return report;
-  }
+  // Future<Report> getReport(String uid, DateTime dateDay) async {
+  //   Uri uri = Uri.parse(BASE_URL + "algorithm/report/");
+  //   Response response = await post(uri,
+  //       body: {"useruid": uid, "dateDay": dateDay.toIso8601String()});
+  //   print("----------------------------------" + response.body);
+  //   Map<String, dynamic> res = jsonDecode(response.body);
+  //   //print("----------------------------------" + res['suggestions'].toString());
+  //   Report report = Report.fromJson(res);
+  //   return report;
+  // }
 }

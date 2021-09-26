@@ -1,5 +1,4 @@
 import 'package:cht/controllers/home_screen_controller.dart';
-import 'package:cht/controllers/report_controller.dart';
 import 'package:cht/screens/homepage/user_reaction.dart';
 import 'package:cht/screens/homepage/widgets/menu.dart';
 import 'package:cht/util/AppConstants.dart';
@@ -19,8 +18,7 @@ class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   final HomeScreenController homeScreenController =
       Get.put(HomeScreenController());
-  final ReportStateController reportStateController =
-      Get.put(ReportStateController());
+
   @override
   void initState() {
     super.initState();

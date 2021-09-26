@@ -1,5 +1,4 @@
 import 'package:cht/controllers/home_screen_controller.dart';
-import 'package:cht/controllers/report_controller.dart';
 import 'package:cht/util/AppConstants.dart';
 import 'package:cht/util/colorConstants.dart';
 import 'package:cht/util/ui_helper.dart';
@@ -7,8 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Menu extends StatelessWidget {
-  final ReportStateController reportController =
-      Get.find<ReportStateController>();
   final HomeScreenController homeScreenController =
       Get.find<HomeScreenController>();
   @override
