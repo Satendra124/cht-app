@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'dart:math';
 
 import 'package:cht/models/report_model.dart';
@@ -7,27 +6,27 @@ class Generator {
   String placeholderImageUrl = "https://via.placeholder.com/";
   Random random = new Random();
   Future<Report> generateReport(DateTime to, DateTime from) async {
-    List<double> randamp = [];
+    List<int> randamp = [];
     for (var i = 0; i < 288; i++) {
-      randamp.add(random.nextDouble() * 1200);
+      randamp.add(random.nextInt(128));
     }
     List<LocationInfo> locs = [];
     for (var i = 0; i < 4; i++) {
       locs.add(new LocationInfo(
-        "location-" + random.nextInt(100).toString(),
-        placeholderImageUrl + "50",
-        Duration(
-          seconds: random.nextInt(10000),
-        ),
-      ));
+          "location-" + random.nextInt(100).toString(),
+          placeholderImageUrl + "50",
+          Duration(
+            seconds: random.nextInt(10000),
+          ),
+          random.nextDouble()));
     }
-    List<MoodInfo> moods = [
-      MoodInfo(Mood.happy, random.nextInt(10)),
-      MoodInfo(Mood.angry, random.nextInt(10)),
-      MoodInfo(Mood.calm, random.nextInt(10)),
-      MoodInfo(Mood.sad, random.nextInt(10)),
-      MoodInfo(Mood.scared, random.nextInt(10)),
-    ];
+    Map<Mood, int> moods = {
+      Mood.happy: random.nextInt(10),
+      Mood.angry: random.nextInt(10),
+      Mood.calm: random.nextInt(10),
+      Mood.sad: random.nextInt(10),
+      Mood.scared: random.nextInt(10),
+    };
     List<ScreenTime> sctime = [];
     for (var i = 0; i < 3; i++) {
       sctime.add(
@@ -37,6 +36,7 @@ class Generator {
           Duration(
             seconds: random.nextInt(10000),
           ),
+          random.nextDouble(),
         ),
       );
     }

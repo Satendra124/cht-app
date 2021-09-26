@@ -1,6 +1,3 @@
-import 'package:cht/models/user.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-
 class Report {
   final double score;
   final List<IndexData> indexHours;

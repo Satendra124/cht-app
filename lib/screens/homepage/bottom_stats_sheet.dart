@@ -38,17 +38,28 @@ class ExpandedActivityView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 32),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       decoration: const BoxDecoration(
         color: Colors.purple,
       ),
       child: Column(children: [
         _pin(),
         SizedBox(height: 20),
-        Text(
-          "Your Activity",
-          style: TextStyle(
-              fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text(
+              "Your Activity",
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
+            ),
+            Icon(
+              Icons.arrow_downward_rounded,
+              size: 50,
+            )
+          ],
         ),
         SizedBox(height: 10),
         DateBar(initialSelection: reportDataController.dateRange.value),
@@ -149,10 +160,23 @@ class ActivityDataView extends StatelessWidget {
               )),
         ],
       ),
-      MoodsWidget(),
-      NoiseWidget(datapoints: [121, 211, 123, 1231]),
-      UsageWidget(),
-      PlacesWidget()
+      Obx(() => MoodsWidget(
+            width: screenWidth - 50,
+            height: 200,
+            moods: reportDataController.report.value.moods,
+          )),
+      Obx(() => NoiseWidget(
+          datapoints: reportDataController.report.value.amplitudes)),
+      Obx(() => UsageWidget(
+            width: screenWidth - 50,
+            height: 200,
+            screenTimeList: reportDataController.report.value.screentime,
+          )),
+      Obx(() => PlacesWidget(
+            width: screenWidth - 50,
+            height: 200,
+            locationInfoList: reportDataController.report.value.locations,
+          ))
     ];
     return Obx(() {
       if (reportDataController.datastate.value == DataState.completed) {
@@ -180,7 +204,6 @@ class ActivityDataView extends StatelessWidget {
   }
 }
 
-//TODO:SATISH
 class ColapsedActivityView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -188,8 +211,18 @@ class ColapsedActivityView extends StatelessWidget {
       height: 400,
       color: Colors.purple,
       width: screenWidth,
-      child: Center(
-        child: Text("Pull"),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Text(
+            "Your Activity",
+            style: TextStyle(fontSize: 30, fontFamily: "LukiestGuy"),
+          ),
+          Icon(
+            Icons.arrow_upward_outlined,
+            size: 60,
+          ),
+        ],
       ),
     );
   }

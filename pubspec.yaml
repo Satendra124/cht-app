@@ -55,6 +55,7 @@ dev_dependencies:
   change_app_package_name: ^0.1.2
   chopper_generator: ^2.3.4
   build_runner:
+  dart_code_metrics: ^2.5.0
   
 
 # For information on the generic Dart part of this file, see the

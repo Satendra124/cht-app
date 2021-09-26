@@ -1,7 +1,3 @@
-import 'package:cht/models/index.dart';
-import 'package:cht/util/constants.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-
 class UserData {
   final String name;
   final String branch;

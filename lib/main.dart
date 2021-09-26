@@ -1,6 +1,5 @@
 import 'package:cht/screens/fetch.dart';
 import 'package:cht/util/theme.dart';
-import 'package:cht/util/ui_helper.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

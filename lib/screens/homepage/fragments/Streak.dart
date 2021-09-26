@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Streak extends StatelessWidget {
-  final double streakDays;
+  final int streakDays;
 
   const Streak({Key key, this.streakDays}) : super(key: key);
   @override
