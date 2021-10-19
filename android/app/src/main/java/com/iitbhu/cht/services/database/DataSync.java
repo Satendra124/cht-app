@@ -2,34 +2,36 @@ package com.iitbhu.cht.services.database;
 
 import android.content.Context;
 import android.location.Location;
+import android.os.Build;
 
-import com.google.android.gms.tasks.Task;
+import androidx.annotation.RequiresApi;
+
 import com.iitbhu.cht.constants.Constants;
 import com.iitbhu.cht.constants.Data;
-import com.iitbhu.cht.models.UserAppUsage;
-import com.iitbhu.cht.services.screentime.AppUsage;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import timber.log.Timber;
-
 public class DataSync {
     private long lastNetworkSync;
-    private long lastLocalsync;
+    private LocalDateTime lastLocalsync;
     private final Context context;
     private Timer syncTimer;
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public DataSync(Context context) {
         this.context  = context;
         syncData();
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private void syncData(){
-        lastLocalsync = System.currentTimeMillis();
+        lastLocalsync = LocalDateTime.now();
         lastNetworkSync = System.currentTimeMillis();
         syncTimer = new Timer();
         TimerTask timerTask = new TimerTask() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void run() {
                 long curTime = System.currentTimeMillis();
@@ -43,16 +45,17 @@ public class DataSync {
         NetworkDBManager.sync_with_local(context);
         lastNetworkSync = System.currentTimeMillis();
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private void localSync(){
-        List<Long> location = calculateLoc(Data.userdata.user_locations);
+        List<Double> location = calculateLoc(Data.userdata.user_locations);
         int steps = Data.userdata.STEPS_JOGGING + Data.userdata.STEPS_WALKING + Data.userdata.STEPS_RUNNING;
         int amplitude = calculateAmp(Data.userdata.sound_data);
         new LocalDBManager(context).addData(location.get(0),location.get(1),steps,amplitude,lastLocalsync);
-        lastLocalsync = System.currentTimeMillis();
+        lastLocalsync = LocalDateTime.now();
     }
 
-    public List<Long> calculateLoc(List<Location> locations){
-        long la=0,lng=0;
+    public List<Double> calculateLoc(List<Location> locations){
+        double la=0,lng=0;
         for (Location loc: locations) {
             la += loc.getLatitude();
             lng += loc.getLongitude();
@@ -61,7 +64,7 @@ public class DataSync {
             la /= locations.size();
             lng /= locations.size();
         }
-        List<Long> location = new ArrayList<>();
+        List<Double> location = new ArrayList<>();
         location.add(la);
         location.add(lng);
         return location;

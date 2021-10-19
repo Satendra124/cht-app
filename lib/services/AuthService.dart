@@ -57,6 +57,7 @@ getUserDataFromIdToken(String idToken) async {
 void loadUser() async {
   GetStorage box = GetStorage();
   String uid = box.read("uid");
+  if (uid == null) uid = FirebaseAuth.instance.currentUser.uid;
   AppConstants.curUser = await PostApiService().userGet(uid);
 }
 

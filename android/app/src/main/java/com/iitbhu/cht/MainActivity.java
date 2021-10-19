@@ -39,7 +39,7 @@ public class MainActivity extends FlutterActivity {
                 .setMethodCallHandler(
                         (call, result) -> {
                             if (call.method.equals("startLocationServer")) {
-                                Constants.userUid = call.argument("uid");
+                                Constants.userUid = call.argument("useruid");
                                 if (!Constants.isInitService) {
                                     initService();
 

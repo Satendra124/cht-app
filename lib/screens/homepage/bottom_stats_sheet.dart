@@ -1,4 +1,5 @@
 import 'package:cht/controllers/report_data_controller.dart';
+import 'package:cht/screens/auth/quiz.dart';
 import 'package:cht/screens/homepage/fragments/mood_widet.dart';
 import 'package:cht/screens/homepage/fragments/noise_widget.dart';
 import 'package:cht/screens/homepage/fragments/places_widget.dart';
@@ -7,7 +8,9 @@ import 'package:cht/screens/homepage/fragments/steps_widget.dart';
 import 'package:cht/screens/homepage/fragments/usage_data.dart';
 import 'package:cht/screens/homepage/home.dart';
 import 'package:cht/screens/homepage/plugin/draggable_bottom_sheet.dart';
+import 'package:cht/util/constants.dart';
 import 'package:cht/util/ui_helper.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,6 +20,33 @@ class BottomStatsSheet extends StatefulWidget {
 }
 
 class _BottomStatsSheetState extends State<BottomStatsSheet> {
+  Future<void> setupInteractedMessage() async {
+    RemoteMessage initialMessage =
+        await FirebaseMessaging.instance.getInitialMessage();
+    if (initialMessage != null) {
+      _handleMessage(initialMessage);
+    }
+    FirebaseMessaging.onMessageOpenedApp.listen(_handleMessage);
+  }
+
+  void _handleMessage(RemoteMessage message) {
+    if (message.data['type'] == 'daily_quiz') {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => QuizWidget(
+              quiz: quiz,
+            ),
+          ));
+    }
+  }
+
+  @override
+  void initState() {
+    setupInteractedMessage();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

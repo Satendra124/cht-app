@@ -5,17 +5,23 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.icu.util.LocaleData;
+import android.os.Build;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
+import com.iitbhu.cht.constants.Constants;
 import com.iitbhu.cht.models.UserAppUsage;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.*;
 import java.util.List;
 import java.util.Locale;
 
@@ -31,22 +37,23 @@ public class LocalDBManager extends SQLiteOpenHelper {
     private static final String KEY_COORDINATE_LAT = "latitude";
     private static final String KEY_COORDINATE_LNG = "longitude";
     //private static final String KEY_APP_USAGE = "app_usage";
-    private static final String KEY_STEPS = "step_count";
-    private static final String KEY_NOISE = "noise_data";
+    private static final String KEY_STEPS = "steps";
+    private static final String KEY_NOISE = "amplitude";
     private static final String KEY_IS_SYNC = "is_synced";
     public LocalDBManager(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    public void addData(long latitude, long longitude, int steps, int amplitude, long startTime) {
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public void addData(double latitude, double longitude, int steps, int amplitude, LocalDateTime startTime) {
         SQLiteDatabase db = this.getWritableDatabase();
         SimpleDateFormat dateFormat = new SimpleDateFormat(
                 "yyyy-MM-dd HH:mm:ss", Locale.getDefault());
         ContentValues values = new ContentValues();
         values.put(KEY_COORDINATE_LAT,latitude);
         values.put(KEY_COORDINATE_LNG,longitude);
-        values.put(KEY_TIME_START,startTime);
-        values.put(KEY_TIME_END,System.currentTimeMillis());
+        values.put(KEY_TIME_START, (startTime).toString());
+        values.put(KEY_TIME_END, LocalDateTime.now().toString());
         values.put(KEY_STEPS,steps);
         values.put(KEY_NOISE,amplitude);
         values.put(KEY_IS_SYNC,false);
@@ -71,7 +78,7 @@ public class LocalDBManager extends SQLiteOpenHelper {
             try {
                 //Timber.d("Columns: %d",cursor.getColumnCount());
                 //Timber.d("key: %d", cursor.getColumnIndex(KEY_ID));
-                row.put(KEY_ID,cursor.getInt(0));
+                //row.put(KEY_ID,cursor.getInt(0));
                 row.put(KEY_TIME_START,cursor.getString(1));
                 row.put(KEY_TIME_END,cursor.getString(2));
                 row.put(KEY_COORDINATE_LAT,cursor.getString(3));
@@ -79,6 +86,7 @@ public class LocalDBManager extends SQLiteOpenHelper {
                 //row.put(KEY_APP_USAGE,cursor.getString(5));
                 row.put(KEY_STEPS,cursor.getInt(5));
                 row.put(KEY_NOISE,cursor.getString(6));
+                row.put("useruid", Constants.userUid);
             } catch (JSONException e) {
                 Timber.e(e);
             }

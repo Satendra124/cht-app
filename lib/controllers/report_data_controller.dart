@@ -1,4 +1,5 @@
-import 'package:cht/data/generator.dart';
+//import 'package:cht/data/generator.dart';
+import 'package:cht/data/post_api_service.dart';
 import 'package:cht/models/report_model.dart';
 import 'package:get/get.dart';
 
@@ -17,18 +18,7 @@ class ReportDataController extends GetxController {
 
   void updateReport() async {
     this.datastate.value = DataState.loading;
-    Generator generator = new Generator();
-    DateTime end = DateTime.now();
-    if (dateRange.value == ReportDateRangeType.today)
-      end.subtract(Duration(days: 1));
-    else if (dateRange.value == ReportDateRangeType.last7days)
-      end.subtract(Duration(days: 7));
-    else
-      end.subtract(Duration(days: 30));
-    this.report.value = await generator.generateReport(
-      DateTime.now(),
-      end,
-    );
+    this.report.value = await PostApiService().getReport(this.dateRange.value);
     this.datastate.value = DataState.completed;
   }
 }

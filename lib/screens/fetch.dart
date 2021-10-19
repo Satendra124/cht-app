@@ -1,6 +1,5 @@
 import 'package:cht/controllers/app_controller.dart';
-import 'package:cht/screens/auth.dart';
-import 'package:cht/screens/homepage/home.dart';
+import 'package:cht/screens/auth/auth.dart';
 import 'package:cht/services/channels.dart';
 import 'package:cht/util/colorConstants.dart';
 import 'package:cht/util/ui_helper.dart';
@@ -25,10 +24,6 @@ class _FetchPageState extends State<FetchPage> {
   }
 
   init() {
-    if (appStateController.authState.value == AuthState.LoggedIn &&
-        appStateController.serviceState.value == ServiceState.On) {
-      Get.off(() => BottomStatsSheet());
-    }
     if (appStateController.authState.value == AuthState.LoggedIn) {
       if (appStateController.serviceState.value == ServiceState.On)
         Get.off(() => BottomStatsSheet());

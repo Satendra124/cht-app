@@ -21,16 +21,16 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import timber.log.Timber;
 
 public class NetworkDBManager {
     public static void sync_with_local(Context context) {
+        Timber.d("NETWORK SYNC");
         LocalDBManager db = new LocalDBManager(context);
         JSONArray data = db.get_async_data();
         Calendar day = Calendar.getInstance();
@@ -45,9 +45,11 @@ public class NetworkDBManager {
         //data.put(usageDataString);
         JSONObject res = new JSONObject();
         try {
-            res.put("data",data);
+            JSONObject json = new JSONObject();
+            json.put("data",data);
+            res.put("data", json);
             res.put("usagedata",usageDataString);
-            res.put("userid", Constants.userUid);
+            res.put("useruid", Constants.userUid);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -56,14 +58,18 @@ public class NetworkDBManager {
                 .url(EndPoints.data_dump)
                 .post(RequestBody.create(MediaType.parse("application/json; charset=utf-8"),res.toString()))
                 .build();
+        client.setConnectTimeout(30, TimeUnit.SECONDS);
+        client.setReadTimeout(30, TimeUnit.SECONDS);
+        client.setWriteTimeout(30, TimeUnit.SECONDS);
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Request request, IOException e) {
-                Timber.e("Failed to upload data to server");
+                e.printStackTrace();
+                Timber.e("Failed to upload data to server" );
             }
             @Override
             public void onResponse(Response response) throws IOException {
-                Timber.e("Success to upload data to server");
+                Timber.e("Success to upload data to server: %s", response.message());
                 db.update_async_data();
             }
         });

@@ -10,16 +10,16 @@ class AppStateController extends GetxController {
   @override
   void onInit() async {
     super.onInit();
-    authState.value = _getAuthState();
+    authState.value = await _getAuthState();
     permissionState.value = _getPermissionState();
     serviceState.value = await _getServiceState();
   }
 
-  AuthState _getAuthState() {
+  Future<AuthState> _getAuthState() async {
     if (FirebaseAuth.instance.currentUser == null)
       return AuthState.LoggedOut;
     else {
-      loadUser();
+      await loadUser();
       return AuthState.LoggedIn;
     }
   }
