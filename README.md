@@ -11,3 +11,4 @@ Debug : ```flutter build apk```
 
 Release: ```flutter run --release``` <br>
 Debug: ```flutter run```
+![UI Image](https://github.com/Satendra124/cht-app/blob/main/ui.png)
